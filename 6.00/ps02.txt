@@ -1,0 +1,16 @@
+Problem 1
+
+n = int(raw_input("Please provide an n value: "))
+
+x = 6 #could define the x,y,z in the script but this allows them to be alternatively defined
+y = 9
+z = 20
+for a in range(0, (n/x)+1): # "+1" is used because the range in the for function is exclusive. Coefficients are constant so we only need to find a value up to n/x
+	for b in range(0, (n/y)+1):
+		for c in range(0, (n/z)+1):
+			if a*x + b*y + c*z == n:
+				print (a, b, c)
+
+
+Problem 2
+This logically makes sense because out smallest pack of nuggets is 6 so when a “run” of 6 is found then any number greater than the initial value in that run can be purchased. This is because any number greater than the largest quantity in the run of 6 can be built using a value for the run and some combination of nugget packs.
